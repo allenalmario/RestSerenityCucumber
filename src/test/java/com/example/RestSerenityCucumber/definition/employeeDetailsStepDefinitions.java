@@ -23,13 +23,8 @@ public class employeeDetailsStepDefinitions {
         SerenityRest.restAssuredThat(response -> response.statusCode(status));
     }
 
-//    @And("Response should contain employee name {string}")
-//    public void responseShouldContainEmployeeName(String expectedEmployeeName) {
-//        SerenityRest.restAssuredThat(response -> response.body("userId", equalTo(expectedEmployeeName)));
-//    }
-
-    @And("Response should contain employee name {int}")
-    public void responseShouldContainEmployeeName(int num) {
+    @And("Response should contain User ID {int}")
+    public void responseShouldContainUserID(int num) {
         SerenityRest.restAssuredThat(response -> response.body("userId", equalTo(num)));
     }
 }
